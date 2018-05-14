@@ -28,6 +28,7 @@ opacity: 0;
   text-align: justify;
   -webkit-transform: perspective(190px) rotateX(30deg); /* Safari */
     transform: perspective(190px) rotateX(30deg);
+    opacity: 1;
 }
 
 .container__text{
@@ -36,7 +37,7 @@ opacity: 0;
   transform: translateY(675px);
   animation-name: starwars;
   animation-delay: 5s;
-  animation-duration: 120s;
+  animation-duration: 100s;
 
 
 }
@@ -47,7 +48,7 @@ opacity: 0;
   text-align: center;
   transform: translateY(675px);
   animation-name: starwars;
-  animation-duration: 120s;
+  animation-duration: 100s;
   animation-delay: 5s;
 }
 
@@ -59,13 +60,18 @@ opacity: 0;
   letter-spacing: -4px;
   transform: translateY(675px);
   animation-name: starwars;
-  animation-duration: 120s;
+  animation-duration: 100s;
   animation-delay: 5s;
 }
 
 @keyframes starwars {
-    from {transform: translateY(675px);}
-    to {transform: translateY(-3500px);}
+    0% {transform: translateY(675px);
+        opacity:1;
+        }
+    98% {opacity: 1;}
+    100% {transform: translateY(-3000px);
+          opacity: 0;
+          }
 }
 @keyframes intro {
   0% {opacity: 1;}
